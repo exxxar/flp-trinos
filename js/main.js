@@ -1,3 +1,4 @@
+var fullSite = false;
 function onScroll(){
 	var d = document.body;	
 	if (d.scrollTop>250)		
@@ -5,57 +6,83 @@ function onScroll(){
 		else
 			$(".menu-main").removeClass("fixed-menu");	
 			
-	if (d.scrollTop>1240&&$(".sub-1").attr("data-hidden")=="false"){
-			$(".sub-1").removeClass("display-none");	
-	}			
+	if (fullSite==false) {
 	
-	if (d.scrollTop<1240) {
-			$(".sub-1").addClass("display-none");
-			$(".sub-1").attr({"data-hidden":"false"});
-			$(".section-catalog").addClass("display-none");
+			if (d.scrollTop>1240&&$(".sub-1").attr("data-hidden")=="false"){
+					$(".sub-1").removeClass("display-none");	
+			}			
+			
+			if (d.scrollTop<1240) {
+					$(".sub-1").addClass("display-none");
+					$(".sub-1").attr({"data-hidden":"false"});
+					$(".section-catalog").addClass("display-none");
+					}
+					
+			if (d.scrollTop>2650&&$(".sub-2").attr("data-hidden")=="false") {
+				$(".sub-2").removeClass("display-none");
+			
 			}
 			
-	if (d.scrollTop>2650&&$(".sub-2").attr("data-hidden")=="false") {
-		$(".sub-2").removeClass("display-none");
-	
+			if (d.scrollTop<2650) {
+					$(".sub-2").addClass("display-none");
+					$(".sub-2").attr({"data-hidden":"false"});
+						$(".section-material").addClass("display-none");
+					}
+					
+			if (d.scrollTop>2880) 
+					$(".section-partner").removeClass("display-none");
+			else
+				$(".section-partner").addClass("display-none");
+				
+		
+			
+			
+	}
+	else
+	{
+		$(".section-catalog").removeClass("display-none");
+		$(".section-material").removeClass("display-none");
+		$(".section-partner").removeClass("display-none");
 	}
 	
-	if (d.scrollTop<2650) {
-			$(".sub-2").addClass("display-none");
-			$(".sub-2").attr({"data-hidden":"false"});
-				$(".section-material").addClass("display-none");
-			}
-			
-	if (d.scrollTop>2880) 
-			$(".section-partner").removeClass("display-none");
-	else
-		$(".section-partner").addClass("display-none");
-		
-	if (d.scrollTop>1600&&d.scrollTop<2800){
-		$(".menu-main ul li").each(function(arg1,arg2){
-				$(this).removeClass("active");
-			});
+	
+	if (d.scrollTop>1600&&d.scrollTop<4000){
+			$(".menu-main ul li").each(function(arg1,arg2){
+					$(this).removeClass("active");
+				});
 
-		$(".menu-main ul li:nth-of-type(2)").addClass("active");
+			$(".menu-main ul li:nth-of-type(2)").addClass("active");
 
-	}		
+		}		
 	
 	if (d.scrollTop<1600) {
-		$(".menu-main ul li").each(function(arg1,arg2){
-				$(this).removeClass("active");
-			});
-			$(".menu-main ul li:nth-of-type(1)").addClass("active");
-	}		
-	
-	if (d.scrollTop>2800) {
+				$(".menu-main ul li").each(function(arg1,arg2){
+						$(this).removeClass("active");
+					});
+					$(".menu-main ul li:nth-of-type(1)").addClass("active");
+			}		
+			
+	if (d.scrollTop>4000&&d.scrollTop<5400) {
 	$(".menu-main ul li").each(function(arg1,arg2){
 			$(this).removeClass("active");
 		});
 		$(".menu-main ul li:nth-of-type(3)").addClass("active");
 	}		
 	
+	if (d.scrollTop>5400&&d.scrollTop<5700) {
+	$(".menu-main ul li").each(function(arg1,arg2){
+			$(this).removeClass("active");
+		});
+		$(".menu-main ul li:nth-of-type(4)").addClass("active");
+	}		
 	
-			//$('.menu-main').html(d.scrollTop);
+	if (d.scrollTop>5700) {
+	$(".menu-main ul li").each(function(arg1,arg2){
+			$(this).removeClass("active");
+		});
+		$(".menu-main ul li:nth-of-type(5)").addClass("active");
+	}		
+	//$('.menu-main').html(d.scrollTop);
 		
 }
 
@@ -146,6 +173,33 @@ $(document).ready(function(){
 			$(".right-content-part").animate({
 				   scrollTop:$("body,html").scrollTop()}, 1000);
 
+		});
+		
+		$(".nav").click(function(){
+			var menuIndex = $(this).attr("data-menu");
+			fullSite = true;
+			var offset = 0;
+			switch(menuIndex){
+			case '0':
+					offset = 230;
+				break;
+			case '1':
+					offset = 2000;				
+					
+				break;
+			case '2':
+					offset = 4450;
+					
+				break;
+			case '3':
+					offset = 5480;
+				break;
+			case '4':
+					offset = 5750;
+				break;
+			}
+				$("body,html").animate({
+				   scrollTop:$("body,html").scrollTop()+offset}, 1000);
 		});
 		
 		$(".catalog-item").click(function(){

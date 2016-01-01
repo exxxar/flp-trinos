@@ -172,6 +172,9 @@ $(document).ready(function(){
 			
 			$(".right-content-part").animate({
 				   scrollTop:$("body,html").scrollTop()}, 1000);
+		
+			$("body,html").animate({
+				   scrollTop:$("body,html").scrollTop()+4450}, 500);
 
 		});
 		

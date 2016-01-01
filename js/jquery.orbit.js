@@ -45,7 +45,7 @@
             images.each(function() {
                 var _img = $(this);
                 var _imgWidth = 1300;
-                var _imgHeight = 760;
+                var _imgHeight = 560;
                 orbit.width(_imgWidth);
                 orbitWidth = orbit.width()
                 orbit.height(_imgHeight)

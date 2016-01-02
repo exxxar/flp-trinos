@@ -1,4 +1,4 @@
-var fullSite = false;
+﻿var fullSite = false;
 function onScroll(){
 	var d = document.body;	
 	if (d.scrollTop>250)		
@@ -85,7 +85,49 @@ function onScroll(){
 	//$('.menu-main').html(d.scrollTop);
 		
 }
-
+var mainPartIndex = 1;
+setTimeout(function(){
+	$(".title").removeClass("hide-title"); 
+	setTimeout(function(){$(".title").addClass("hide-title");
+	},5000);},1000);
+setInterval(function(){
+	$(".title").removeClass("hide-title");
+	mainPartIndex++;
+	if (mainPartIndex>5)
+		mainPartIndex = 1;
+	
+	var textH2 = "";
+	var textP  = "";
+	switch(mainPartIndex){
+		case 2:
+			textH2 = "Гостинные";
+			textP = "Для создания гостинных мы используем современные материалы от проверенных производителей. Наша команда трудится над созданием уюта в Вашем доме.";
+			break;
+		case 4:
+			textH2 = "Кухни";
+			textP = "Мы создадим кухню, которая независимо от размера будет стильной и функциональной, а также отразит превосходный вкус хозяйки.";
+			break;
+		case 1:
+			textH2 = "Спальни";
+			textP = "Наши спальные гарнитуры придутся по вкусу тем, кто ценит в своем доме комфорт и уют. Мы создаем качественные и долговечные спальни.";
+			break;
+		case 3:
+			textH2 = "Гардеробные";
+			textP = "Мы изготовим гардеробные и шкафы-купе любой сложности, которые позволят грамотно и рационально использовать площадь Вашего жилища.";
+			break;
+		case 5:
+			textH2 = "Ванные команты";
+			textP = "При разработке мебели для Вашей ванной комнаты мы опираемся на самые перспективные направления в дизайне.";
+			break;
+			break;
+	}
+	
+	setTimeout(function(){$(".title").addClass("hide-title");},6000);
+		
+	$(".title h2").html(textH2);
+	$(".title p").html(textP);
+	$(".section-test-2 .main-part").css({ "background": "url('img/main-slider/"+mainPartIndex+".jpg') center no-repeat","background-size":"1300px 700px","transition":"5s"});
+},10000);
 $(window).load(function() {
 		$('#featured').orbit({
 			'bullets': true,
@@ -178,13 +220,13 @@ $(document).ready(function(){
 
 		});
 		
-		$(".nav").click(function(){
+		$(".section-test-2 .button-show, .nav").click(function(){
 			var menuIndex = $(this).attr("data-menu");
 			fullSite = true;
 			var offset = 0;
 			switch(menuIndex){
 			case '0':
-					offset = 230;
+					offset = 255;
 				break;
 			case '1':
 					offset = 2000;				
@@ -201,6 +243,9 @@ $(document).ready(function(){
 					offset = 5750;
 				break;
 			}
+			
+				$(".sub-1").addClass("display-none");
+				$(".sub-2").addClass("display-none");					
 				$("body,html").animate({
 				   scrollTop:$("body,html").scrollTop()+offset}, 1000);
 		});

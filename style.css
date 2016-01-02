@@ -532,22 +532,27 @@ margin-left: 32px;
 }
 
 .section-test nav ul li{
-float: left;
+	float: left;
     padding: 23px 66px 18px 67px;
-    cursor: pointer
+    cursor: pointer;
+	transition:0.4s;
+	
 }
 .section-test nav ul li:hover{
 		background:rgba(255,222,164,0.8);	
 	background:linear-gradient(to bottom, #D5BA8C, #C7AF86);
+	transition:1s;
 }
 
 .active {
 	background:rgba(255,222,164,0.8);	
 	background:linear-gradient(to bottom, #D5BA8C, #C7AF86);
+	transition:1s;
 }
 
 .active:hover a{
 	border-bottom:1px dashed white;
+	transition:1s;
 }
 .section-test nav ul li a{
 	font-size:20pt;
@@ -563,20 +568,39 @@ float: left;
 }
 
 .section-test-2 .main-part {
-	width:1300px;
-	position:relative;
-	margin:auto;
-	background:url('img/screen-1.jpg') center no-repeat;
-	background-size:cover;
-	height:100%;
+	width: 1300px;
+    position: relative;
+    margin: auto;
+    background: url('img/main-slider/1.jpg') center no-repeat;
+    background-size: 1300px 700px;
+    height: 100%;
+   // background-position: 0px -250px;
+	//-webkit-animation:moveBg 20s infinite;
+	overflow:hidden;
+}
+
+@-webkit-keyframes moveBg {
+	0%,100% {
+		background-position: 0px -250px;
+	}
+	50% {
+		background-position: 0px -100px;
+	}
 }
 
 .section-test-2 .title {
-	width:560px;
-	padding:20px;
-	background:rgba(0,0,0,0.5);
-	margin-top:300px;
-	float:left;
+    width: 560px;
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    margin-top: 250px;
+    float: left;
+	transition:5s;
+}
+
+.hide-title {
+	//margin-left:-1000px;
+	opacity:0;
+	transition:5s;
 }
 
 .section-test-2 .title h2 {
@@ -594,37 +618,40 @@ float: left;
 }
 
 .section-test-2 .button-show {
-	width:320px;
-	height:65px;
-	background:#ffd790;
-	position:absolute;
-    margin-top: 470px;
-	cursor:pointer;
+    width: 280px;
+    height: 70px;
+    background: #ffd790;
+    position: absolute;
+    /* margin-top: 350px; */
+    cursor: pointer;
+    right: 0;
+    bottom: 0;
 }
 
 .section-test-2 .button-show p{
-	float: left;
+    float: left;
     color: white;
     font-family: 'Impact';
-    font-size: 36pt;
+    font-size: 30pt;
     line-height: 120%;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
 .section-test-2 .button-show img{
     float: left;
     margin-left: 20px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .section-test-2 .slider-part {
-	width:595px;
-	padding:20px;
-	height:140px;
-	background:rgba(0,0,0,0.5);
-	position:absolute;
-	right:0;
-	bottom:0;
+ width: 1020px;
+    padding: 20px 15px 20px 15px;
+    height: 140px;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 .section-test-2 .slider-part ul{

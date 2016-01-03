@@ -95,7 +95,7 @@ setInterval(function(){
 	mainPartIndex++;
 	if (mainPartIndex>5)
 		mainPartIndex = 1;
-	
+	var marginTop = "250px";
 	var textH2 = "";
 	var textP  = "";
 	switch(mainPartIndex){
@@ -117,13 +117,13 @@ setInterval(function(){
 			break;
 		case 5:
 			textH2 = "Ванные команты";
-			textP = "При разработке мебели для Вашей ванной комнаты мы опираемся на самые перспективные направления в дизайне.";
-			break;
+			textP = "При разработке мебели для Вашей ванной комнаты мы используем современный подход к проектированию и опираемся на самые перспективные направления в дизайне.";
+			marginTop = "220px";
 			break;
 	}
 	
 	setTimeout(function(){$(".title").addClass("hide-title");},6000);
-		
+	$(".title").css({"margin-top":marginTop});
 	$(".title h2").html(textH2);
 	$(".title p").html(textP);
 	$(".section-test-2 .main-part").css({ "background": "url('img/main-slider/"+mainPartIndex+".jpg') center no-repeat","background-size":"1300px 700px","transition":"5s"});
@@ -249,25 +249,70 @@ $(document).ready(function(){
 				$("body,html").animate({
 				   scrollTop:$("body,html").scrollTop()+offset}, 1000);
 		});
+		$(".back-to-catalog").click(function(){
 		
+			$(".catalog-item").each(function(a,b){				
+					$(b).removeClass("catalog-item-zip");	
+			});
+			$(".catalog-menu").css({"display":"block"});
+			setTimeout(function(){
+					$(".catalog-menu").css({"opacity":"1","transition":"1s"});
+			},1000);
+		
+			
+			$(".catalog-selected").each(function(a,b){
+				$(b).css({"display":"none"});
+			});
+			
+			$("body,html").animate({
+				   scrollTop:$("body,html").scrollTop()+2000}, 1000);
+			
+		});
 		$(".catalog-item").click(function(){
 			var k = $(this);
-			$(".catalog-item").each(function(a,b){
-				
+			var index = k.attr("data-item");
+			var el = ".c"+index;	
+			$(".catalog-item").each(function(a,b){				
 					$(b).addClass("catalog-item-zip");
 			});
 		
 			
 			$(".catalog-menu").css({"opacity":"0","transition":"1s"});
+			$(el).css({"display":"block"});
 			setTimeout(function(){
-					$(".catalog-menu").css({"display":"none"});
-					//$(".c1").css({"display":"block","margin-left":"-20000px"});
+					$(".catalog-menu").css({"display":"none"});													
+					$(el).css({"transition":"2s","margin-left":"20px"});					
+			},1000);
+			
+			setTimeout(function(){
+				$(el).css({"opacity":"1"});
 			},2000);
 			
-			$(".c1").css({"transition":"2s","margin-left":"20px"});
-			setTimeout(function(){
-				$(".c1").css({"opacity":"1"});
-			},1000);
+			$("body,html").animate({
+				   scrollTop:$("body,html").scrollTop()+2000}, 1000);
 		});
-	
+		
+		$(".csm").click(function(){
+		
+			var k = $(this);
+			var index = k.attr("data-item");
+			var currEl =  k.attr("data-current"); 			
+			var el = ".c"+index;	
+			$(".c"+currEl).css({"transition":"2s","margin-left":"2000px"});
+			$(".c"+currEl).css({"display":"none"});
+			$(el).css({"display":"block"});															
+			$(el).css({"transition":"2s","margin-left":"20px"});
+			$(el).css({"opacity":"1"});	
+			$("body,html").animate({
+				   scrollTop:$("body,html").scrollTop()+2000}, 1000);
+			$(".catalog-selected").scrollTop($("body,html").scrollTop()-1000);				
+		});
+		/*
+		$(window).resize(function() {
+          if(parseInt($(window).width())>1600)    
+				$("body").css({"zoom":"1.25"});
+				else
+					$("body").css({"zoom":"1"});
+		});
+	*/
 	});

@@ -70,7 +70,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 }
 body {
 	font: 12px/18px Arial, sans-serif;
-		background:url('img/bg.jpg') fixed center;
+		background:url('img/bg-3.jpg') fixed center;
 		min-width:1300px;
 }
 
@@ -345,7 +345,7 @@ margin-left: 32px;
 
 .footer .content{
 	background:rgba(255,222,164,0.8);	
-	background:linear-gradient(to bottom, #D5BA8C, #C7AF86);
+	//background:linear-gradient(to bottom, #D5BA8C, #C7AF86);
 
 }
 
@@ -772,6 +772,7 @@ div.arr{
 
 .section-partner .partner img{
 	width:150px;
+	margin-left: 20px;
 }
 
 .section-partner h1 {
@@ -829,13 +830,13 @@ div.arr{
 
 .section-catalog h1{
 	font-family: 'Classica One';
-    font-size: 38pt;
+    font-size: 54pt;
     text-align: center;
-    line-height: 250%;
+    line-height: 100%;
     font-weight: bold;
     color: black;
-	padding-top: 20px;
-	
+    padding-top: 70px;
+	padding-bottom: 45px;	
 }
 
 .section-material h2{
@@ -850,12 +851,54 @@ div.arr{
 	text-align:center;
 	color:black;
 }
-
+.catalog-selected-menu h2,
 .section-catalog h2{
-	font-size:24pt;
+	    font-size: 54pt;
 	text-align:center;
+	    line-height: 200%;
 }
 
+.catalog-selected-menu {
+    width: 100%;
+    height: 160px;
+}
+
+.catalog-selected-menu ul {
+width: 800px;
+    margin: auto;
+    position: relative;
+    height: 50px;
+    margin-top: -40px;
+} 
+
+.catalog-selected-menu ul li {
+    float: left;
+    padding: 9px;
+	cursor:pointer;
+	transition:.5s;
+}
+
+.catalog-selected-menu ul li:hover {
+	color: #CE8C16;
+	transition:.5s;
+}
+
+.back-to-catalog {
+    float: left;
+    width: 100%;
+    height: 50px;
+    background: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.active-m {
+	color: #CE8C16;
+}
+.back-to-catalog p{
+    text-align: center;
+    font-size: 20pt;
+    padding: 15px;
+}
 .catalog-item {
 	width: 600px;
     height: 400px;
@@ -863,6 +906,7 @@ div.arr{
     margin: 25px;
 	overflow:hidden;
 	cursor:pointer;
+
 }
 
 .catalog-item:hover img{
@@ -928,7 +972,7 @@ width: 300px;
 }
 .left-menu ul li {
 	padding:10px 10px 10px 10px;
-	border-bottom:1px white dashed;
+	border-bottom:1px #ceb589 dashed;
 }
 .left-menu ul li a {
 	font-size:24pt;
@@ -939,7 +983,7 @@ width: 300px;
 .right-content-part {
 	width:920px;
 	height:800px;
-	border-left:2px white solid;
+	border-left:2px #ccc solid;
 	overflow-y:scroll;
 	margin-top:50px;
 	margin-left:25px;
@@ -1154,14 +1198,59 @@ font-family: 'Century Gothic';
 
 .catalog-selected {
 	width:1260px;
+	overflow-y:scroll;
+	height: 2200px;
+	opacity:0;
+	margin-left:2000px;
+	position:relative;
 	
 }
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,
+.c9 {
+	display:none;
+}
 
-.c1 {
-	height:1000px;
-	//border:1px green solid;
-	opacity:0;
-	//background:red;
-	margin-left:-2000px;
-	position:relative;
+.images-f {
+	float:left;
+	overflow:hidden;
+}
+
+.images-f img {
+	width:100%;
+	height:100%;
+}
+
+.fi-bedrooms-1 {    
+	width: 1240px;
+    height: 775px;
+	}
+.fi-bedrooms-2 {    
+	width: 620px;
+    height: 600px;
+    margin: 10px 10px 0px 0px;
+}
+.fi-bedrooms-3 {
+    width: 610px;
+    height: 720px;
+    margin: 10px 0px 0px 0px;
+}
+.fi-bedrooms-4 {
+    width: 620px;
+    height: 500px;
+    margin: -110px 10px 0px 0px;
+}
+.fi-bedrooms-5 {
+    width: 620px;
+    height: 520px;
+    margin: 10px 10px 0px 0px;
+}
+.fi-bedrooms-6 {
+    width: 610px;
+    height: 720px;
+    margin: -380px 0px 0px 0px;
+}
+
+
+.slick-prev:before, .slick-next:before {
+    color: #9BAAA7;
 }

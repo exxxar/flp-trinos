@@ -1,4 +1,30 @@
 ﻿var fullSite = false;
+
+var myCenter=new google.maps.LatLng(48.0038615,37.7479408,18);
+
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:17,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  icon:'arrow.png',
+  left:200
+ // animation:google.maps.Animation.BOUNCE
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
 function onScroll(){
 	var d = document.body;	
 	if (d.scrollTop>250)		
@@ -46,7 +72,7 @@ function onScroll(){
 	}
 	
 	
-	if (d.scrollTop>1600&&d.scrollTop<4000){
+	if (d.scrollTop>1600&&d.scrollTop<4400){
 			$(".menu-main ul li").each(function(arg1,arg2){
 					$(this).removeClass("active");
 				});
@@ -62,7 +88,7 @@ function onScroll(){
 					$(".menu-main ul li:nth-of-type(1)").addClass("active");
 			}		
 			
-	if (d.scrollTop>4000&&d.scrollTop<5400) {
+	if (d.scrollTop>4400&&d.scrollTop<5470) {
 	$(".menu-main ul li").each(function(arg1,arg2){
 			$(this).removeClass("active");
 		});
@@ -229,6 +255,19 @@ $(document).ready(function(){
 					offset = 255;
 				break;
 			case '1':
+					
+					$(".catalog-item").each(function(a,b){				
+					$(b).removeClass("catalog-item-zip");	
+					});
+					$(".catalog-menu").css({"display":"block"});
+					setTimeout(function(){
+							$(".catalog-menu").css({"opacity":"1","transition":"1s"});
+					},1000);
+				
+					
+					$(".catalog-selected").each(function(a,b){
+						$(b).css({"display":"none"});
+						});
 					offset = 2000;				
 					
 				break;
@@ -262,10 +301,42 @@ $(document).ready(function(){
 			
 			$(".catalog-selected").each(function(a,b){
 				$(b).css({"display":"none"});
+				
 			});
 			
 			$("body,html").animate({
 				   scrollTop:$("body,html").scrollTop()+2000}, 1000);
+				   
+					
+			
+		});
+		
+		$(".slider-part ul li").click(function(){
+			fullSite = true;
+			var k = $(this);
+			var index = k.attr("data-item");
+			var el = ".c"+index;	
+			$(".catalog-item").each(function(a,b){				
+					$(b).addClass("catalog-item-zip");
+			});
+		
+			
+			$(".catalog-menu").css({"opacity":"0","transition":"1s"});
+			$(el).css({"display":"block"});
+			setTimeout(function(){
+					$(".catalog-menu").css({"display":"none"});													
+					$(el).css({"transition":"2s","margin-left":"20px"});					
+			},1000);
+			
+			setTimeout(function(){
+				$(el).css({"opacity":"1"});
+			},2000);
+			
+			$("body,html").animate({
+				   scrollTop:$("body,html").scrollTop()+2000}, 1000);
+		
+			$(".catalog-selected").animate({
+				   scrollTop:$("body,html").scrollTop()}, 1000);
 			
 		});
 		$(".catalog-item").click(function(){
@@ -290,6 +361,9 @@ $(document).ready(function(){
 			
 			$("body,html").animate({
 				   scrollTop:$("body,html").scrollTop()+2000}, 1000);
+		
+			$(".catalog-selected").animate({
+				   scrollTop:$("body,html").scrollTop()}, 1000);
 		});
 		
 		$(".csm").click(function(){

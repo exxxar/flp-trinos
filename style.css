@@ -418,7 +418,7 @@ margin-left: 32px;
 .fixed-menu {
 	position:fixed;
 	left:0;
-	top:-40px;
+	top:-41px;
 	z-index:10000000;
 }
 
@@ -519,10 +519,10 @@ margin-left: 32px;
 .section-test nav {
 	width: 100%;
     min-width: 1300px;
-    height: 65px;
+    height: 64px;
     background: linear-gradient(to bottom, #3c3c3c, #202020);
     float:left;
-    margin-top: 40px;
+    margin-top: 41px;
 }
 
 .section-test nav ul{
@@ -544,15 +544,14 @@ margin-left: 32px;
 	transition:1s;
 }
 
-.active {
+.menu-main  .active {
 	background:rgba(255,222,164,0.8);	
 	background:linear-gradient(to bottom, #D5BA8C, #C7AF86);
-	transition:1s;
 }
 
-.active:hover a{
+.menu-main .active:hover a{
 	border-bottom:1px dashed white;
-	transition:1s;
+	//background:red;
 }
 .section-test nav ul li a{
 	font-size:20pt;
@@ -666,7 +665,7 @@ margin-left: 32px;
 	margin-right:10px;
 	float:left;
 	overflow:hidden;
-
+	cursor:pointer;
 }
 
 .section-test-2 .slider-part ul li:hover img{
@@ -712,7 +711,7 @@ div.arr{
 }
 .section-catalog {
     width: 100%;
-    height: 2420px;
+    height: 2450px;
     transition: 1s;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -1213,11 +1212,13 @@ font-family: 'Century Gothic';
 .images-f {
 	float:left;
 	overflow:hidden;
+		transition:2s;
 }
 
 .images-f img {
 	width:100%;
 	height:100%;
+	transition:2s;
 }
 
 .fi-bedrooms-1 {    
@@ -1250,7 +1251,283 @@ font-family: 'Century Gothic';
     margin: -380px 0px 0px 0px;
 }
 
+.fi-wardrobes-1 {    
+	width: 1240px;
+    height: 775px;
+}
+.fi-wardrobes-2 {    
+    width: 750px;
+    height: 1000px;
+    margin: 10px 10px 0px 0px;
+}
+.fi-wardrobes-3 {
+    width: 480px;
+    height: 720px;
+    margin: 10px 0px 0px 0px;
+}
+.fi-wardrobes-4 {
+    width: 750px;
+    height: 940px;
+    margin: 10px 10px 0px 0px;
+}
+.fi-wardrobes-5 {
+    width: 480px;
+    height: 720px;
+    margin: -270px 10px 0px 0px;
+}
+.fi-wardrobes-6 {
+    width: 480px;
+    height: 490px;
+    margin: 10px 0px 0px 0px;
+}
 
+.fi-wardrobes-7 {
+    width: 620px;
+    height: 520px;
+    margin: 10px 0px 0px 0px;
+}
+
+.fi-wardrobes-8 {
+    width: 610px;
+    height: 520px;
+    margin: 10px 10px 10px 10px;
+}
+
+.fi-wardrobes-9 {
+    width: 620px;
+    height: 720px;
+    margin: 0px 0px 0px 0px;
+}
+
+.fi-wardrobes-10 {
+    width: 610px;
+    height: 620px;
+    margin: 0px 10px 10px 10px;
+}
+
+.fi-wardrobes-11 {
+    width: 610px;
+    height: 520px;
+    margin: 0px 10px 10px 10px;
+}
+
+.fi-cabinet-1 {
+    width: 524px;
+    height: 791px;
+    margin: 10px 10px 10px 10px;
+}
+
+.fi-kitchen-1 {
+    width: 610px;
+    height: 500px;
+    margin: 10px 0px 0px 10px;
+}
+
+.fi-kitchen-2 {
+    width: 610px;
+    height: 500px;
+    margin: 10px 0px 0px 10px;
+}
+
+.fi-kitchen-3 {
+    width: 610px;
+    height: 500px;
+    margin: 10px 0px 0px 10px;
+}
+.fi-kitchen-4 {
+    width: 610px;
+    height: 500px;
+    margin: 10px 0px 0px 10px;
+}
+.fi-kitchen-5 {
+    width: 610px;
+    height: 500px;
+    margin: 10px 0px 0px 10px;
+}
+.fi-kitchen-6 {
+    width: 610px;
+    height: 500px;
+    margin: 10px 0px 0px 10px;
+}
+.fi-kitchen-7 {
+width: 610px;
+    height: 1010px;
+    margin: 10px 0px 0px 10px;
+}
+.fi-kitchen-8 {
+    width: 610px;
+    height: 500px;
+    margin: 10px 0px 0px 10px;
+}
+.fi-kitchen-9 {
+    width: 610px;
+    height: 500px;
+    margin: 10px 0px 0px 10px;
+}
+.fi-kitchen-10 {
+    width: 610px;
+    height: 1010px;
+    margin: 10px 0px 0px 10px;
+}
+.fi-kitchen-11 {
+    width: 610px;
+    height: 500px;
+    margin: 10px 0px 0px 10px;
+}
+.fi-kitchen-12 {
+    width: 610px;
+    height: 500px;
+    margin: 10px 0px 0px 10px;
+}
+.fi-kitchen-13 {
+    width: 610px;
+    height: 900px;
+    margin: 10px 0px 0px 10px
+}
+
+.fi-bathrooms-1 {    
+	width: 1240px;
+    height: 775px;
+	}
+.fi-bathrooms-2 {    
+    width: 615px;
+    height: 800px;
+    margin: 10px 10px 0px 0px;
+}
+
+.fi-bathrooms-3 {    
+    width: 615px;
+    height: 800px;
+    margin: 10px 10px 0px 0px;
+}
+.fi-bathrooms-4 {    
+    width: 615px;
+    height: 800px;
+    margin: 10px 10px 0px 0px;
+}
+.fi-bathrooms-5 {    
+    width: 615px;
+    height: 800px;
+    margin: 10px 10px 0px 0px;
+}
+
+.fi-child-1 {    
+	width: 1240px;
+    height: 775px;
+	}
+.fi-child-2 {    
+    width: 615px;
+    height: 800px;
+    margin: 10px 10px 0px 0px;
+}
+
+.fi-child-3 {    
+    width: 615px;
+    height: 800px;
+    margin: 10px 10px 0px 0px;
+}
+
+.fi-dressing-1 {    
+	width: 1240px;
+    height: 775px;
+	}
+.fi-dressing-2 {    
+    width: 615px;
+    height: 800px;
+    margin: 10px 10px 0px 0px;
+}
+
+.fi-dressing-3 {    
+    width: 615px;
+    height: 500px;
+    margin: 10px 10px 0px 0px;
+}
+.fi-dressing-4 {    
+    width: 615px;
+    height: 800px;
+    margin: 10px 10px 0px 0px;
+}
+.fi-dressing-5 {    
+width: 615px;
+    height: 800px;
+    margin: -500px 10px 0px 0px;
+}
+
+.fi-dressing-6 {    
+    width: 615px;
+    height: 800px;
+    margin: 10px 10px 0px 0px;
+}
+
+.fi-hallways-1 {    
+	width: 1240px;
+    height: 775px;
+	}
+.fi-hallways-2 {    
+    width: 615px;
+    height: 800px;
+    margin: 10px 10px 0px 0px;
+}
+
+.fi-hallways-3 {    
+    width: 615px;
+    height: 800px;
+    margin: 10px 10px 0px 0px;
+}
+.fi-hallways-4 {    
+    width: 615px;
+    height: 800px;
+    margin: 10px 10px 0px 0px;
+}
+.fi-hallways-5 {    
+    width: 615px;
+    height: 800px;
+    margin: 10px 10px 0px 0px;
+}
+
+.fi-hallways-6 {    
+    width: 615px;
+    height: 800px;
+    margin: 10px 10px 0px 0px;
+}
+
+.fi-living-rooms-1 {
+    width: 610px;
+    height: 500px;
+    margin: 10px 0px 0px 10px;
+}
+
+.fi-living-rooms-2 {
+    width: 610px;
+    height: 500px;
+    margin: 10px 0px 0px 10px;
+}
+
+.fi-living-rooms-3 {
+    width: 610px;
+    height: 500px;
+    margin: 10px 0px 0px 10px;
+}
+.fi-living-rooms-4 {
+    width: 610px;
+    height: 500px;
+    margin: 10px 0px 0px 10px;
+}
+.fi-living-rooms-5 {
+    width: 610px;
+    height: 800px;
+    margin: 10px 0px 0px 10px;
+}
+.fi-living-rooms-6 {
+    width: 610px;
+    height: 800px;
+    margin: 10px 0px 0px 10px;
+}
+
+.images-f:hover img{
+	transform:scale(1.1,1.1);
+	transition:3s;
+}
 .slick-prev:before, .slick-next:before {
     color: #9BAAA7;
 }

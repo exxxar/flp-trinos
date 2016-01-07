@@ -1,19 +1,21 @@
 @font-face {
     font-family: 'Kobzar KS';
     src: local('Kobzar KS'), local('KobzarKS'),
-	url('fonts/kobzarks/kobzarks.woff2') format('woff2'),
-	url('fonts/kobzarks/kobzarks.woff') format('woff'),
-	url('fonts/kobzarks/kobzarks.ttf') format('truetype');
+	url('../fonts/kobzarks/kobzarks.woff2') format('woff2'),
+	url('../fonts/kobzarks/kobzarks.woff') format('woff'),
+	url('../fonts/kobzarks/kobzarks.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Classica One';
-    src:
-	url('fonts/classicaone/classicaone.woff2') format('woff2'),
-	url('fonts/classicaone/classicaone.woff') format('woff'),
-	url('fonts/classicaone/classicaone.ttf') format('truetype');
+    src: local('Classica One'), local('ClassicaOne'),
+	url('../fonts/classicaone/classicaone.woff2') format('woff2'),
+	url('../fonts/classicaone/classicaone.woff') format('woff'),
+	url('../fonts/classicaone/classicaone.ttf') format('truetype'),
+	url('../fonts/classicaone/ClassicaOneRegular.eot') format('eot'),
+	url('../fonts/classicaone/classicaone.svg') format('svg');
     font-weight: 400;
     font-style: normal;
 }
@@ -77,6 +79,14 @@ body {
 * {
     box-sizing: border-box;
 	text-decoration:none;
+}
+
+img {
+	pointer-events: none;
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none;
 }
 .wrapper {
 	width: 100%;
@@ -533,7 +543,7 @@ margin-left: 32px;
 
 .section-test nav ul li{
 	float: left;
-    padding: 23px 66px 18px 67px;
+   padding: 23px 106px 18px 106px;
     cursor: pointer;
 	transition:0.4s;
 	
@@ -570,7 +580,7 @@ margin-left: 32px;
 	width: 1300px;
     position: relative;
     margin: auto;
-    background: url('img/main-slider/1.jpg') center no-repeat;
+    background: url('img/main-slider/4.jpg') center no-repeat;
     background-size: 1300px 700px;
     height: 100%;
    // background-position: 0px -250px;
@@ -937,20 +947,14 @@ width: 800px;
 		background:url('a1.png') center no-repeat;
 		background-size:100% 100%;
 		transition:1s;
-	}
-	25% {
-		background:url('a2.png') center no-repeat;
-		background-size:100% 100%;
-		transition:1s;
-	}
-	
-	45% {
+	}	
+	35% {
 		background:url('a3.png') center no-repeat;
 		background-size:100% 100%;
 		transition:1s;
 	}
 	
-	85% {
+	75% {
 		background:url('a4.png') center no-repeat;
 	background-size:100% 100%;
 	transition:1s;
@@ -1239,7 +1243,7 @@ font-family: 'Century Gothic';
 	
 }
 .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,
-.c9 {
+.c9,.c10 {
 	display:none;
 }
 

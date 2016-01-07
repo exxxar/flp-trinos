@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
@@ -15,16 +15,16 @@
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<link rel="stylesheet" href="orbit.css">	
 	<link href="style.css" rel="stylesheet">
-
+	
 </head>
-
+  
 <body onscroll="onScroll()">
 <div class="wrapper">
 	<section class="section-test">
 		<div class="main-part">
 			<div class="logo-1">
 				<div class="logo-c">
-					<img src="img/logo-2.png">
+					<img src="img/logo-2.png" oncontextmenu="return false">
 				</div>	
 				<h1>ФЛП</h1>
 				<h1 class="colored">ТРИНОС</h1>
@@ -44,17 +44,17 @@
 				<li class="right-border nav" data-menu="1"><a>КАТАЛОГ</a></li>
 				<li class="right-border nav" data-menu="2"><a>МАТЕРИАЛЫ</a></li>
 				<li class="right-border nav" data-menu="3"><a>КОНТАКТЫ</a></li>
-				<li class="nav" data-menu="4"><a>НАШИ ПАРТНЕРЫ</a></li>
+			<!--	<li class="nav" data-menu="4"><a>НАШИ ПАРТНЕРЫ</a></li> -->
 				
 			</ul>
 		</nav>
 	</section>
 	<section class="section-test-2">
 		<div class="main-part">
-			<div class="title hide-title">
-				<h2>Спальни</h2>
+			<div class="title">
+				<h2>Кухни</h2>
 				<p>
-					Наши спальные гарнитуры придутся по вкусу тем, кто ценит в своем доме комфорт и уют. Мы создаем качественные и долговечные спальни.
+					Мы создадим кухню, которая независимо от размера будет стильной и функциональной, а также отразит превосходный вкус хозяйки.
 				</p>
 			</div>
 			<div class="button-show" data-menu="1">
@@ -144,13 +144,14 @@
 	<section class="section-slider">
 		<div class="content slides" >
 			<div id="featured"> 
-				<a href="http://www.zurb.com/playground" target="_blank"><img src="img/main/1.jpg" alt="Link" /></a>
-				<img src="img/main/2.jpg" alt="Link" />
-				<img src="img/main/3.jpg" alt="Link" />
-				<img src="img/main/4.jpg" alt="Link" />
-				<img src="img/main/5.jpg" alt="Link" />
-				<img src="img/main/6.jpg" alt="Link" />
-				<img src="img/main/7.jpg" alt="Link" />
+				<a href="http://www.zurb.com/playground" target="_blank"><img src="img/main/1.jpg" alt="Link" rel="kitchenC" width="1300" height="560"/></a>
+				<img src="img/main/2.jpg" oncontextmenu="return false" alt="Link" rel="wardrobesC"/>
+				<img src="img/main/3.jpg" oncontextmenu="return false" alt="Link" rel="childC"/>
+				<img src="img/main/4.jpg" oncontextmenu="return false" alt="Link" rel="hallwaysC"/>
+				<img src="img/main/5.jpg" oncontextmenu="return false" alt="Link" rel="dressingC"/>
+				<img src="img/main/6.jpg" oncontextmenu="return false" alt="Link" rel="kitchen2C"/>
+				<img src="img/main/7.jpg" oncontextmenu="return false" alt="Link" rel="bedroomsC"/>
+				
 			</div> 			
 		</div>
 	</section>
@@ -227,13 +228,16 @@
 			</div>
 		</div>
 	</section>
+	
+	 <![if IE]>
 	<section class="section-sub display-none sub-1" data-hidden="false">
 		<div class="content">
 			<p>Смотреть каталоги товаров?</p>
 		</div>
 	</section>
-	
-	<section class="section-catalog display-none">
+	  <![endif]-->
+	  
+	<section class="section-catalog  <![if IE]>display-none<![endif]-->">
 		<div class="content">
 			<h1>Мебель для Вас</h1>
 			<div class="catalog-menu">
@@ -337,7 +341,7 @@
 				
 				</div>
 				
-				<div class="catalog-item" data-item="9">
+				<div class="catalog-item" data-item="10">
 					<div class="img-part">
 						<div class="img"></div>
 					</div>
@@ -694,16 +698,35 @@
 				</div>
 				<div class="back-to-catalog"><p>Вернуться к каталогам</p></div>
 			</div>
+			
+			<div class="catalog-selected c10">
+				<div class="catalog-selected-menu">
+					<h2>ВИЗУАЛИЗАЦИЯ</h2>
+					<ul>
+						<li class="csm" data-current="10" data-item="1"><a>ШКАФЫ-КУПЕ</a></li>
+						<li class="csm" data-current="10" data-item="2"><a>КУХНИ</a></li>
+						<li class="csm" data-current="10" data-item="3"><a>ГОСТИННЫЕ</a></li>
+						<li class="csm" data-current="10" data-item="4"><a>КАБИНЕТЫ</a></li>
+						<li class="csm " data-current="10" data-item="5"><a>СПАЛЬНИ</a></li>
+						<li class="csm" data-current="10" data-item="6"><a>ГАРДЕРОБНЫЕ</a></li>
+						<li class="csm" data-current="10" data-item="7"><a>ВАННЫЕ КОМАНТЫ</a></li>
+						<li class="csm" data-current="10" data-item="8"><a>ДЕТСКИЕ</a></li>
+						<li class="csm" data-current="10" data-item="9"><a>ПРИХОЖИЕ</a></li>
+					</ul>
+				</div>
+				
+				<div class="back-to-catalog"><p>Вернуться к каталогам</p></div>
+			</div>
 		</div>
 	</section>
-	
+	<![if IE]>
 	<section class="section-sub display-none sub-2" data-hidden="false">
 		<div class="content">
 			<p>А не желаете ли посмотреть материалы?</p>
 		</div>
 	</section>
-	
-	<section class="section-material display-none">
+	<![endif]-->
+	<section class="section-material <![if IE]>display-none<![endif]-->">
 		<div class="content">
 			<h1>Материалы</h1>
 			<h2>(каталоги)</h2>
@@ -915,29 +938,15 @@
 				
 				<div class="material-section display-none-material" data-item="5">
 					<h1>Столешницы</h1>
+					<img class="img-m" src="img/tristone/1.jpg">
 					
-					<div class="slider-material s1">
-						<div class="material-slider s1">
-						  <div><img src="img/tristone/classic/1.jpg"></div>
-						  <div><img src="img/tristone/classic/2.jpg"></div>
-						  <div><img src="img/tristone/classic/3.jpg"></div>
-						  <div><img src="img/tristone/classic/4.jpg"></div>	
-						  <div><img src="img/tristone/classic/5.jpg"></div>
-						  <div><img src="img/tristone/classic/6.jpg"></div>
-						  <div><img src="img/tristone/classic/7.jpg"></div>
-						  <div><img src="img/tristone/classic/8.jpg"></div>		
-						  <div><img src="img/tristone/classic/9.jpg"></div>
-						  <div><img src="img/tristone/classic/10.jpg"></div>
-						
-						</div>
-					</div>
 					<p>
 					Столешницы из искусственного камня, наряду с другими изделиями, все чаще используемыми в интерьере жилья, из этого пользуются все большим спросом.
 					</p>
 					<p>
 					Искусственный камень используется для изготовления раковин, смесителей, кухонных столешниц, а также столешниц для ванн и различных кухонных атрибутов.
 					</p>
-					<img class="img-m" src="img/tristone/1.jpg">
+					
 					<p>
 					Этот материал заслужил свою популярность благодаря целому ряду свойств, таких как:
 					</p>
@@ -959,24 +968,17 @@
 					</p>
 					<div class="slider-material s1">
 						<div class="material-slider s1">
-						  <div><img src="img/tristone/romantic/1.jpg"></div>
-						  <div><img src="img/tristone/romantic/2.jpg"></div>
-						  <div><img src="img/tristone/romantic/3.jpg"></div>
-						  <div><img src="img/tristone/romantic/4.jpg"></div>	
-						  <div><img src="img/tristone/romantic/5.jpg"></div>
-						  <div><img src="img/tristone/romantic/6.jpg"></div>
-						  <div><img src="img/tristone/romantic/7.jpg"></div>
-						  <div><img src="img/tristone/romantic/8.jpg"></div>		
-						  <div><img src="img/tristone/romantic/9.jpg"></div>
-						  <div><img src="img/tristone/romantic/10.jpg"></div>
-						  <div><img src="img/tristone/romantic/11.jpg"></div>
-						  <div><img src="img/tristone/romantic/12.jpg"></div>
-						  <div><img src="img/tristone/romantic/13.jpg"></div>
-						  <div><img src="img/tristone/romantic/14.jpg"></div>	
-						  <div><img src="img/tristone/romantic/15.jpg"></div>
-						  <div><img src="img/tristone/romantic/16.jpg"></div>
-						  <div><img src="img/tristone/romantic/17.jpg"></div>
-						  <div><img src="img/tristone/romantic/18.jpg"></div>
+						  <div><img src="img/tristone/classic/1.jpg"></div>
+						  <div><img src="img/tristone/classic/2.jpg"></div>
+						  <div><img src="img/tristone/classic/3.jpg"></div>
+						  <div><img src="img/tristone/classic/4.jpg"></div>	
+						  <div><img src="img/tristone/classic/5.jpg"></div>
+						  <div><img src="img/tristone/classic/6.jpg"></div>
+						  <div><img src="img/tristone/classic/7.jpg"></div>
+						  <div><img src="img/tristone/classic/8.jpg"></div>		
+						  <div><img src="img/tristone/classic/9.jpg"></div>
+						  <div><img src="img/tristone/classic/10.jpg"></div>
+						
 						</div>
 					</div>
 					<p>
@@ -996,26 +998,7 @@
 					<p>
 						Столешницы из ламинированной ДСП обладают рядом преимуществ, таких как легкость в установке, высокая прочность, относительно низкая цена и большой выбор цветов. Из недостатков можно отметить необходимость обрабатывать герметиками любые швы и места соединений со стеной, для избежания попадания влаги на незащищенные участки.
 					</p>
-					<div class="slider-material s1">
-						<div class="material-slider s1">
-						  <div><img src="img/tristone/vizantia/1.jpg"></div>
-						  <div><img src="img/tristone/vizantia/2.jpg"></div>
-						  <div><img src="img/tristone/vizantia/3.jpg"></div>
-						  <div><img src="img/tristone/vizantia/4.jpg"></div>	
-						  <div><img src="img/tristone/vizantia/5.jpg"></div>
-						  <div><img src="img/tristone/vizantia/6.jpg"></div>
-						  <div><img src="img/tristone/vizantia/7.jpg"></div>
-						  <div><img src="img/tristone/vizantia/8.jpg"></div>		
-						  <div><img src="img/tristone/vizantia/9.jpg"></div>
-						  <div><img src="img/tristone/vizantia/10.jpg"></div>
-						  <div><img src="img/tristone/vizantia/11.jpg"></div>
-						  <div><img src="img/tristone/vizantia/12.jpg"></div>
-						  <div><img src="img/tristone/vizantia/13.jpg"></div>
-						  <div><img src="img/tristone/vizantia/14.jpg"></div>	
-						  <div><img src="img/tristone/vizantia/15.jpg"></div>
-
-						</div>
-					</div>
+					
 					
 				</div>
 				
@@ -1191,6 +1174,8 @@
 						Витраж с росписью — рисунок, выполненный специальными силикатными красками, закрепляют с помощью высокой температуры.
 					</p>
 				</div>
+				
+				
 			</div>
 		</div>
 	</section>
@@ -1211,8 +1196,9 @@
 			</div>
 		</div>
 	</div>
+	<!--
+	<section class="section-partner <![if IE]>display-none<![endif]--><!--">
 	
-	<section class="section-partner display-none">
 		<div class="content">
 			<h1>Наши партнеры</h1>
 			<div class="partner">
@@ -1229,7 +1215,7 @@
 			</div>
 		</div>
 	</section>	
-	
+	-->
 	<footer class="footer">
 		<div class="content">
 			<div class="left">

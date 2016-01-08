@@ -243,7 +243,7 @@ img {
 .section-slider .content {
      margin-top: 20px;
     /* padding-top: 30px; */
-    height: 560px;
+    height: 890px;
 }
 
 .description p {
@@ -580,10 +580,10 @@ margin-left: 32px;
 	width: 1300px;
     position: relative;
     margin: auto;
-    background: url('img/main-slider/4.jpg') center no-repeat;
-    background-size: 1300px 700px;
+    background: url('img/main/6.jpg') center no-repeat;
+    background-size: 1300px 891px;
     height: 100%;
-   // background-position: 0px -250px;
+    background-position: 0px -100px;
 	//-webkit-animation:moveBg 20s infinite;
 	overflow:hidden;
 }
@@ -1241,6 +1241,34 @@ font-family: 'Century Gothic';
 	margin-left:2000px;
 	position:relative;
 	
+}
+
+.catalog-selected > p {
+    margin-left: 20px;
+    text-align: justify;
+    margin-bottom: 20px;
+    font-size: 20pt;
+    line-height: 120%;
+    width: 1220px;
+}
+
+
+
+.catalog-selected .img-v {
+
+	width:1220px;
+	margin-left:20px;
+	margin-top:10px;
+	
+}
+.catalog-selected > .img-v:nth-of-type(2) {
+	    width: 640px;
+    margin-left: 300px;
+
+}
+
+.catalog-selected b {
+	font-weight:bold;
 }
 .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,
 .c9,.c10 {

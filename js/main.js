@@ -225,6 +225,8 @@ $(document).ready(function(){
 		
 		 $('.material-slider-2').slick({
 			  infinite: true,
+			  //slidesToShow: 1,
+			  slidesToScroll: 1,
 			  centerMode: true,
 			  variableWidth: true
 			});
@@ -284,18 +286,18 @@ $(document).ready(function(){
 					$(".catalog-selected").each(function(a,b){
 						$(b).css({"display":"none"});
 						});
-					offset = 2000;				
+					offset = 2300;				
 					
 				break;
 			case '2':
-					offset = 4450;
+					offset = 4800;
 					
 				break;
 			case '3':
-					offset = 5480;
+					offset = 5680;
 				break;
 			case '4':
-					offset = 5750;
+					offset = 5850;
 				break;
 			}
 			

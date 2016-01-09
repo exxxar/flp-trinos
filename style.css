@@ -637,6 +637,24 @@ margin-left: 32px;
     bottom: 0;
 }
 
+.section-test-2 .button-visual {
+width: 100px;
+    height: 100px;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    padding: 10px;
+    top: 30px;
+    cursor: pointer;
+    /* bottom: 0; */
+    right: 30px;
+}
+
+.section-test-2 .button-visual img{
+    width: 100%;
+    height: 100%;
+
+}
+
 .section-test-2 .button-show p{
     float: left;
     color: white;
@@ -1223,6 +1241,23 @@ font-family: 'Century Gothic';
 		margin-bottom: 20px;
 }
 
+.s5 div {
+		width:1200px;
+}
+
+.s5 div img {
+	position:relative;
+	margin:auto;
+
+}
+
+.extra {
+	margin-top: 200px;
+}
+
+.extra img {
+	    width: 1050px !important;
+}
 .left-menu a {
     color: #9baaa7;
     text-decoration: none;

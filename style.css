@@ -1311,55 +1311,61 @@ font-family: 'Century Gothic';
 }
 
 .images-f {
-	float:left;
-	overflow:hidden;
-		transition:2s;
+    float: left;
+    overflow: hidden;
+    transition: 2s;
+    //border: 1px green solid;
+    position: relative;
+    margin: auto;
+    /* left: 100px; */
 }
 
 .images-f img {
-	width:100%;
-	height:100%;
+	//width:100%;
+	//height:100%;
 	transition:2s;
 }
 
 .fi-bedrooms-1 {    
-	width: 1240px;
+    width: 1190px;
     height: 775px;
+    margin-left: 20px;
 	}
 .fi-bedrooms-2 {    
-	width: 620px;
+    width: 920px;
     height: 600px;
-    margin: 10px 10px 0px 0px;
+    margin: 10px 10px 0px 150px;
 }
 .fi-bedrooms-3 {
-    width: 610px;
+    width: 630px;
     height: 720px;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0px 0px 60px;
 }
 .fi-bedrooms-4 {
-    width: 620px;
-    height: 500px;
-    margin: -110px 10px 0px 0px;
+    width: 1200px;
+    height: 750px;
+    margin: 10px 10px 0px 20px;
 }
 .fi-bedrooms-5 {
-    width: 620px;
-    height: 520px;
-    margin: 10px 10px 0px 0px;
+    width: 1070px;
+    height: 720px;
+    margin: 10px 10px 0px 80px;
 }
 .fi-bedrooms-6 {
-    width: 610px;
+    width: 480px;
     height: 720px;
-    margin: -380px 0px 0px 0px;
+    margin: 10px 0px 0px 10px;
 }
 
 .fi-wardrobes-1 {    
-	width: 1240px;
+	width: 1040px;
     height: 775px;
+    left: 100px;
 }
 .fi-wardrobes-2 {    
-    width: 750px;
-    height: 1000px;
-    margin: 10px 10px 0px 0px;
+width: 620px;
+    height: 800px;
+    margin: 10px 10px 0px 70px;
 }
 .fi-wardrobes-3 {
     width: 480px;
@@ -1367,49 +1373,49 @@ font-family: 'Century Gothic';
     margin: 10px 0px 0px 0px;
 }
 .fi-wardrobes-4 {
-    width: 750px;
-    height: 940px;
-    margin: 10px 10px 0px 0px;
+    width: 600px;
+    height: 800px;
+    margin: 10px 10px 0px 90px;
 }
 .fi-wardrobes-5 {
     width: 480px;
     height: 720px;
-    margin: -270px 10px 0px 0px;
+    margin: -70px 10px 0px 0px;
 }
 .fi-wardrobes-6 {
-    width: 480px;
-    height: 490px;
-    margin: 10px 0px 0px 0px;
+    width: 800px;
+    height: 790px;
+    margin: 10px 0px 0px 250px;
 }
 
 .fi-wardrobes-7 {
-    width: 620px;
-    height: 520px;
-    margin: 10px 0px 0px 0px;
+    width: 1090px;
+    height: 800px;
+    margin: 10px 0px 0px 100px;
 }
 
 .fi-wardrobes-8 {
-    width: 610px;
-    height: 520px;
-    margin: 10px 10px 10px 10px;
+    width: 1020px;
+    height: 800px;
+    margin: 10px 10px 10px 140px;
 }
 
 .fi-wardrobes-9 {
-    width: 620px;
+    width: 600px;
     height: 720px;
     margin: 0px 0px 0px 0px;
 }
 
 .fi-wardrobes-10 {
-    width: 610px;
+    width: 620px;
     height: 620px;
     margin: 0px 10px 10px 10px;
 }
 
 .fi-wardrobes-11 {
-    width: 610px;
-    height: 520px;
-    margin: 0px 10px 10px 10px;
+    width: 1050px;
+    height: 720px;
+    margin: 10px 10px 10px 100px;
 }
 
 .fi-cabinet-1 {
@@ -1419,208 +1425,211 @@ font-family: 'Century Gothic';
 }
 
 .fi-kitchen-1 {
-    width: 610px;
-    height: 500px;
-    margin: 10px 0px 0px 10px;
+    width: 970px;
+    height: 800px;
+    margin: 10px 0px 0px 140px;
 }
 
 .fi-kitchen-2 {
-    width: 610px;
-    height: 500px;
-    margin: 10px 0px 0px 10px;
+    width: 1080px;
+    height: 700px;
+    margin: 10px 0px 0px 90px;
 }
 
 .fi-kitchen-3 {
-    width: 610px;
-    height: 500px;
-    margin: 10px 0px 0px 10px;
+    width: 1070px;
+    height: 800px;
+    margin: 10px 0px 0px 100px;
 }
 .fi-kitchen-4 {
-    width: 610px;
-    height: 500px;
-    margin: 10px 0px 0px 10px;
+    width: 1070px;
+    height: 800px;
+    margin: 10px 0px 0px 100px;
 }
 .fi-kitchen-5 {
-    width: 610px;
-    height: 500px;
-    margin: 10px 0px 0px 10px;
+    width: 1060px;
+    height: 800px;
+    margin: 10px 0px 0px 100px;
 }
 .fi-kitchen-6 {
-    width: 610px;
-    height: 500px;
-    margin: 10px 0px 0px 10px;
+    width: 1250px;
+    height: 770px;
+    margin: 10px 0px 0px 0px;
 }
 .fi-kitchen-7 {
-width: 610px;
-    height: 1010px;
+    width: 530px;
+    height: 800px;
     margin: 10px 0px 0px 10px;
 }
 .fi-kitchen-8 {
-    width: 610px;
-    height: 500px;
-    margin: 10px 0px 0px 10px;
+    width: 1150px;
+    height: 700px;
+    margin: 10px 0px 0px 50px;
 }
 .fi-kitchen-9 {
-    width: 610px;
-    height: 500px;
-    margin: 10px 0px 0px 10px;
+    width: 1250px;
+    height: 750px;
+    margin: 10px 0px 0px 0px;
 }
 .fi-kitchen-10 {
-    width: 610px;
-    height: 1010px;
-    margin: 10px 0px 0px 10px;
+	width: 600px;
+    height: 810px;
+    margin: 10px 0px 0px 320px;
 }
 .fi-kitchen-11 {
-    width: 610px;
-    height: 500px;
-    margin: 10px 0px 0px 10px;
+    width: 1020px;
+    height: 794px;
+    margin: 10px 0px 0px 100px;
 }
 .fi-kitchen-12 {
-    width: 610px;
-    height: 500px;
-    margin: 10px 0px 0px 10px;
+    width: 1200px;
+    height: 760px;
+    margin: 10px 0px 0px 30px;
 }
 .fi-kitchen-13 {
-    width: 610px;
-    height: 900px;
-    margin: 10px 0px 0px 10px
+width: 590px;
+    height: 800px;
+    margin: 10px 0px 0px 70px;
 }
 
 .fi-bathrooms-1 {    
-	width: 1240px;
+    width: 1200px;
     height: 775px;
+    margin-left: 20px;
 	}
 .fi-bathrooms-2 {    
-    width: 615px;
+    width: 530px;
     height: 800px;
-    margin: 10px 10px 0px 0px;
+    margin: 10px 10px 0px 60px;
 }
 
 .fi-bathrooms-3 {    
-    width: 615px;
+width: 600px;
     height: 800px;
     margin: 10px 10px 0px 0px;
 }
 .fi-bathrooms-4 {    
-    width: 615px;
+    width: 540px;
     height: 800px;
-    margin: 10px 10px 0px 0px;
+    margin: 10px 10px 0px 90px;
 }
 .fi-bathrooms-5 {    
-    width: 615px;
+    width: 535px;
     height: 800px;
     margin: 10px 10px 0px 0px;
 }
 
 .fi-child-1 {    
-	width: 1240px;
+width: 1030px;
     height: 775px;
+    margin-left: 150px;
 	}
 .fi-child-2 {    
-    width: 615px;
+    width: 535px;
     height: 800px;
-    margin: 10px 10px 0px 0px;
+    margin: 10px 10px 0px 130px;
 }
 
 .fi-child-3 {    
-    width: 615px;
+    width: 535px;
     height: 800px;
     margin: 10px 10px 0px 0px;
 }
 
 .fi-dressing-1 {    
-	width: 1240px;
+    width: 1240px;
     height: 775px;
 	}
 .fi-dressing-2 {    
-    width: 615px;
+    width: 480px;
     height: 800px;
-    margin: 10px 10px 0px 0px;
+    margin: 10px 10px 0px 150px;
 }
 
 .fi-dressing-3 {    
-    width: 615px;
-    height: 500px;
-    margin: 10px 10px 0px 0px;
+    width: 1070px;
+    height: 800px;
+    margin: 10px 10px 0px 100px;
 }
 .fi-dressing-4 {    
-    width: 615px;
+    width: 480px;
     height: 800px;
     margin: 10px 10px 0px 0px;
 }
 .fi-dressing-5 {    
-width: 615px;
+    width: 590px;
     height: 800px;
-    margin: -500px 10px 0px 0px;
+    margin: 10px 10px 0px 80px
 }
 
 .fi-dressing-6 {    
-    width: 615px;
+    width: 530px;
     height: 800px;
     margin: 10px 10px 0px 0px;
 }
 
 .fi-hallways-1 {    
-	width: 1240px;
+    width: 1040px;
     height: 775px;
+    margin-left: 120px;
 	}
 .fi-hallways-2 {    
-    width: 615px;
+    width: 600px;
     height: 800px;
-    margin: 10px 10px 0px 0px;
+    margin: 10px 10px 0px 70px;
 }
 
 .fi-hallways-3 {    
-    width: 615px;
+    width: 540px;
     height: 800px;
     margin: 10px 10px 0px 0px;
 }
 .fi-hallways-4 {    
-    width: 615px;
+    width: 530px;
     height: 800px;
-    margin: 10px 10px 0px 0px;
+    margin: 10px 10px 0px 100px;
 }
 .fi-hallways-5 {    
-    width: 615px;
+ width: 530px;
     height: 800px;
     margin: 10px 10px 0px 0px;
 }
 
 .fi-hallways-6 {    
-    width: 615px;
+width: 485px;
     height: 800px;
-    margin: 10px 10px 0px 0px;
+    margin: 10px 10px 0px 400px;
 }
 
 .fi-living-rooms-1 {
-    width: 610px;
-    height: 500px;
-    margin: 10px 0px 0px 10px;
+  width: 1060px;
+    height: 800px;
+    margin: 10px 0px 0px 100px;
 }
 
 .fi-living-rooms-2 {
-    width: 610px;
-    height: 500px;
-    margin: 10px 0px 0px 10px;
+width: 1150px;
+    height: 800px;
+    margin: 10px 0px 0px 50px;
 }
 
 .fi-living-rooms-3 {
-    width: 610px;
-    height: 500px;
-    margin: 10px 0px 0px 10px;
+  width: 1060px;
+    height: 800px;
+    margin: 10px 0px 0px 100px;
 }
 .fi-living-rooms-4 {
-    width: 610px;
-    height: 500px;
-    margin: 10px 0px 0px 10px;
+    width: 1060px;
+    height: 800px;
+    margin: 10px 0px 0px 100px;
 }
 .fi-living-rooms-5 {
-    width: 610px;
+width: 610px;
     height: 800px;
-    margin: 10px 0px 0px 10px;
+    margin: 10px 0px 0px 60px;
 }
 .fi-living-rooms-6 {
-    width: 610px;
+    width: 540px;
     height: 800px;
     margin: 10px 0px 0px 10px;
 }

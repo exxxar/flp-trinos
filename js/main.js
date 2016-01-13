@@ -7,7 +7,7 @@ function initialize()
 {
 var mapProp = {
   center:myCenter,
-  zoom:17,
+  zoom:18,
   mapTypeId:google.maps.MapTypeId.ROADMAP
   };
 
@@ -260,7 +260,7 @@ $(document).ready(function(){
 				   scrollTop:$("body,html").scrollTop()}, 1000);
 		
 			$("body,html").animate({
-				   scrollTop:$("body,html").scrollTop()+4450}, 500);
+				   scrollTop:$("body,html").scrollTop()+4850}, 500);
 
 		});
 		
@@ -324,7 +324,7 @@ $(document).ready(function(){
 			});
 			
 			$("body,html").animate({
-				   scrollTop:$("body,html").scrollTop()+2000}, 1000);
+				   scrollTop:$("body,html").scrollTop()+2400}, 1000);
 				   
 					
 			
@@ -358,7 +358,7 @@ $(document).ready(function(){
 			},2000);
 			
 			$("body,html").animate({
-				   scrollTop:$("body,html").scrollTop()+2000}, 1000);
+				   scrollTop:$("body,html").scrollTop()+2400}, 1000);
 		
 			$(".catalog-selected").animate({
 				   scrollTop:$("body,html").scrollTop()}, 1000);
@@ -394,7 +394,7 @@ $(document).ready(function(){
 			},2000);
 			
 			$("body,html").animate({
-				   scrollTop:$("body,html").scrollTop()+2000}, 1000);
+				   scrollTop:$("body,html").scrollTop()+2400}, 1000);
 		
 			$(".catalog-selected").animate({
 				   scrollTop:$("body,html").scrollTop()}, 1000);
@@ -412,7 +412,7 @@ $(document).ready(function(){
 			$(el).css({"transition":"2s","margin-left":"20px"});
 			$(el).css({"opacity":"1"});	
 			$("body,html").animate({
-				   scrollTop:$("body,html").scrollTop()+2000}, 1000);
+				   scrollTop:$("body,html").scrollTop()+2400}, 1000);
 			$(".catalog-selected").scrollTop($("body,html").scrollTop()-1000);				
 		});
 		/*

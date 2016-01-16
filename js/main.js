@@ -1,4 +1,5 @@
-﻿var fullSite = false;
+﻿var fullSite = true;
+var catalogShow = false;
 
 var myCenter=new google.maps.LatLng(48.0038615,37.7479408,18);
 
@@ -117,6 +118,25 @@ if (fullSite==false&&d.scrollTop>1830) {
 		$(".menu-main ul li:nth-of-type(4)").addClass("active");
 	}		
 	
+	if (d.scrollTop>4300){
+		
+		$(".catalog-item").each(function(a,b){				
+					$(b).removeClass("catalog-item-zip");	
+					});
+					$(".catalog-menu").css({"display":"block"});
+					setTimeout(function(){
+							$(".catalog-menu").css({"opacity":"1","transition":"1s"});
+					},1000);
+				
+					
+					$(".catalog-selected").each(function(a,b){
+						$(b).css({"display":"none"});
+						});
+		
+		
+			
+	}
+		
 	//$('.menu-main').html(d.scrollTop);
 		
 }
@@ -154,7 +174,7 @@ setInterval(function(){
 		case 5:
 			textH2 = "Ванные команты";
 			textP = "При разработке мебели для Вашей ванной комнаты мы используем современный подход к проектированию и опираемся на самые перспективные направления в дизайне.";
-			marginTop = "220px";
+			marginTop = "2200px";
 			break;
 	}
 	
@@ -171,9 +191,86 @@ $(window).load(function() {
 			'timer' : true,
 			'animation' : 'horizontal-slide'
 		});
+		onScroll();
 });
 
 $(document).ready(function(){
+		var targets = $( '[rel~=tooltip]' ),
+				target	= false,
+				tooltip = false,
+				title	= false;
+
+			targets.bind( 'mouseenter', function()
+			{
+				target	= $( this );
+				tip		= target.attr( 'title' );
+				tooltip	= $( '<div id="tooltip"></div>' );
+
+				if( !tip || tip == '' )
+					return false;
+
+				target.removeAttr( 'title' );
+				tooltip.css( 'opacity', 0 )
+					   .html( tip )
+					   .appendTo( 'body' );
+
+				var init_tooltip = function()
+				{
+					if( $( window ).width() < tooltip.outerWidth() * 1.5 )
+						tooltip.css( 'max-width', $( window ).width() / 2 );
+					else
+						tooltip.css( 'max-width', 340 );
+
+					var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( tooltip.outerWidth() / 2 ),
+						pos_top	 = target.offset().top - tooltip.outerHeight() - 20;
+
+					if( pos_left < 0 )
+					{
+						pos_left = target.offset().left + target.outerWidth() / 2 - 20;
+						tooltip.addClass( 'left' );
+					}
+					else
+						tooltip.removeClass( 'left' );
+
+					if( pos_left + tooltip.outerWidth() > $( window ).width() )
+					{
+						pos_left = target.offset().left - tooltip.outerWidth() + target.outerWidth() / 2 + 20;
+						tooltip.addClass( 'right' );
+					}
+					else
+						tooltip.removeClass( 'right' );
+
+					if( pos_top < 0 )
+					{
+						var pos_top	 = target.offset().top + target.outerHeight();
+						tooltip.addClass( 'top' );
+					}
+					else
+						tooltip.removeClass( 'top' );
+
+					tooltip.css( { left: pos_left, top: pos_top } )
+						   .animate( { top: '+=10', opacity: 1 }, 50 );
+				};
+
+				init_tooltip();
+				$( window ).resize( init_tooltip );
+
+				var remove_tooltip = function()
+				{
+					tooltip.animate( { top: '-=10', opacity: 0 }, 50, function()
+					{
+						$( this ).remove();
+					});
+
+					target.attr( 'title', tip );
+				};
+
+				target.bind( 'mouseleave', remove_tooltip );
+				tooltip.bind( 'click', remove_tooltip );
+			});
+			
+			/*----------------toooltip end-------------------*/
+			
 		$('body').on('contextmenu', 'img', function(e){
 			  return false;
 			});
@@ -306,7 +403,7 @@ $(document).ready(function(){
 				$("body,html").animate({
 				   scrollTop:$("body,html").scrollTop()+offset}, 1000);
 		});
-		$(".back-to-catalog").click(function(){
+		$(".back-to-catalog,.back-to-catalog-2").click(function(){
 		
 			$(".catalog-item").each(function(a,b){		
 				if ($(b).hasClass("catalog-item-zip"))
@@ -322,16 +419,19 @@ $(document).ready(function(){
 				$(b).css({"display":"none"});
 				
 			});
+		
+		
 			
 			$("body,html").animate({
-				   scrollTop:$("body,html").scrollTop()+2400}, 1000);
+				   scrollTop:$("body,html").scrollTop()+2200}, 1000);
 				   
-					
+			catalogShow = false;		
 			
 		});
 		
-		$(".slider-part ul li").click(function(){
+		$(".slider-part ul li, .button-visual").click(function(){
 			fullSite = true;
+			catalogShow = true;
 			var k = $(this);
 			var index = k.attr("data-item");
 			var el = ".c"+index;	
@@ -358,16 +458,18 @@ $(document).ready(function(){
 			},2000);
 			
 			$("body,html").animate({
-				   scrollTop:$("body,html").scrollTop()+2400}, 1000);
+				   scrollTop:$("body,html").scrollTop()+2200}, 1000);
 		
 			$(".catalog-selected").animate({
 				   scrollTop:$("body,html").scrollTop()}, 1000);
+			
 			
 		
 			
 		});
 		$(".catalog-item").click(function(){
 			var k = $(this);
+			catalogShow = true;
 			var index = k.attr("data-item");
 			var el = ".c"+index;	
 
@@ -394,10 +496,12 @@ $(document).ready(function(){
 			},2000);
 			
 			$("body,html").animate({
-				   scrollTop:$("body,html").scrollTop()+2400}, 1000);
+				   scrollTop:$("body,html").scrollTop()+2200}, 1000);
 		
 			$(".catalog-selected").animate({
 				   scrollTop:$("body,html").scrollTop()}, 1000);
+				   
+				  
 		});
 		
 		$(".csm").click(function(){
@@ -412,7 +516,7 @@ $(document).ready(function(){
 			$(el).css({"transition":"2s","margin-left":"20px"});
 			$(el).css({"opacity":"1"});	
 			$("body,html").animate({
-				   scrollTop:$("body,html").scrollTop()+2400}, 1000);
+				   scrollTop:$("body,html").scrollTop()+2200}, 1000);
 			$(".catalog-selected").scrollTop($("body,html").scrollTop()-1000);				
 		});
 		/*

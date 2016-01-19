@@ -11,11 +11,11 @@
 @font-face {
     font-family: 'Classica One';
     src: local('Classica One'), local('ClassicaOne'),
-	url('../fonts/classicaone/classicaone.woff2') format('woff2'),
-	url('../fonts/classicaone/classicaone.woff') format('woff'),
-	url('../fonts/classicaone/classicaone.ttf') format('truetype'),
-	url('../fonts/classicaone/ClassicaOneRegular.eot') format('eot'),
-	url('../fonts/classicaone/classicaone.svg') format('svg');
+	url('http://mebel-trinos.com/fonts/ClassicaOne/classicaone.woff2') format('woff2'),
+	url('http://mebel-trinos.com/fonts/ClassicaOne/classicaone.woff') format('woff'),
+	url('http://mebel-trinos.com/fonts/ClassicaOne/classicaone.ttf') format('truetype'),
+	url('http://mebel-trinos.com/fonts/ClassicaOne/ClassicaOneRegular.eot') format('eot'),
+	url('http://mebel-trinos.com/fonts/ClassicaOne/classicaone.svg') format('svg');
     font-weight: 400;
     font-style: normal;
 }

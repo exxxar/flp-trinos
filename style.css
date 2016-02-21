@@ -1,0 +1,359 @@
+@font-face {
+    font-family: 'Kobzar KS';
+    src: local('Kobzar KS'), local('KobzarKS'),
+	url('fonts/kobzarks/kobzarks.woff2') format('woff2'),
+	url('fonts/kobzarks/kobzarks.woff') format('woff'),
+	url('fonts/kobzarks/kobzarks.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Classica One';
+    src:
+	url('fonts/classicaone/classicaone.woff2') format('woff2'),
+	url('fonts/classicaone/classicaone.woff') format('woff'),
+	url('fonts/classicaone/classicaone.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font: 12px/18px Arial, sans-serif;
+		background:url('img/bg.jpg');
+}
+.wrapper {
+	width: 100%;
+	min-width:1300px;
+	margin-top:40px;
+}
+
+.content {
+	height:100%;
+	width: 1300px;
+	margin:auto;
+	background:rgba(255,255,255,0.5);
+	font-family:'Century Gothic';
+}
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	height: 95px;
+}
+
+.header .content {
+		background: #ddcdb2;
+		//background: -webkit-radial-gradient(30px 50px, circle cover, #ece1d0, #ddcdb2);
+		background: linear-gradient(to bottom, #ece1d0, #ddcdb2);
+}
+
+.header .logo {
+	float:left;
+	margin-left:20px;
+}
+
+.header ul {
+	float:left;
+}
+
+.header ul li {
+	float:left;
+	padding:37px;
+	transition:background .5s;
+	cursor:pointer;
+}
+
+.header ul li:hover {
+	transition:background .5s;
+	//background:rgba(255,255,255,0.5);
+}
+
+.header ul li:hover:after {
+	content:'';
+	width:30px;
+	height:12px;
+	background:url('img/point-1.png') no-repeat;
+	position:absolute;
+	margin-top:30px;
+	margin-left:-70px;
+}
+
+.header ul li:nth-of-type(1):hover:after {
+	margin-left:-70px;
+}
+.header ul li:nth-of-type(2):hover:after {
+	margin-left:-70px;
+}
+.header ul li:nth-of-type(3):hover:after {
+	margin-left:-90px;
+}
+.header ul li:nth-of-type(4):hover:after{
+	margin-left:-120px;
+}
+.header ul li a{
+	color:white;
+	text-decoration:none;
+	font-size:18pt;
+}
+
+
+.header input[type="text"] {
+    float: left;
+    margin-top: 25px;
+    padding: 10px;
+    padding-right: 35px;
+    font-size: 12pt;
+    width: 220px;
+    border-radius: 5px;
+    border: none;
+}
+/*
+.header form:before {
+	content: '';
+    width: 14px;
+    height: 14px;
+    background: url('img/search.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    margin-top: 37px;
+    margin-left: 193px;
+}
+*/
+
+.header input[type="submit"] {
+	float: right;
+    margin-top: -30px;
+    margin-right: 40px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent url('img/search.png') center no-repeat;
+	cursor:pointer;
+}
+.header input[type="submit"]:focus,
+.header input[type="text"]:focus {
+	outline:none;
+}
+
+.width-border-right {
+	border-right:2px solid rgba(255,255,255,0.5);
+}
+/* Middle
+-----------------------------------------------------------------------------*/
+.content {
+}
+
+.section-1 nav {
+    background: white;
+    margin-top: 0px;
+    padding: 20px;
+}
+.section-1 .content {
+    padding-top: 30px;
+    height: 600px;
+}
+.description p {
+	font-size:18pt;
+	line-height:120%;
+}
+.description p:nth-of-type(1) {
+	margin-left:30px;
+}
+.description p:nth-of-type(2) {
+	margin-left:40px;
+}
+.description p:nth-of-type(3) {
+	margin-left:50px;
+}
+.description p:nth-of-type(4) {
+	margin-left:60px;
+}
+.description p:nth-of-type(5) {
+	margin-left:70px;
+}
+
+.section-1 h2 {
+	font-family: 'Classica One';
+    font-size: 48pt;
+    line-height: 120%;
+    margin-left: -20px;
+	margin-top: 20px;
+}
+
+.section-2 .content{
+	background:white;
+	padding-top:20px;
+	height:580px;
+	margin-top:30px;
+}
+
+.section-2 .h1 {
+	width:520px;
+	position:relative;
+	margin:auto;
+
+}
+
+.section-2  h1 {
+	font-family: 'Classica One';
+    font-size: 38pt;
+    text-align: center;
+    line-height: 250%;
+    font-weight: bold;
+	color:black;
+}
+
+.section-2 .item {
+	float:left;
+	width:255px;
+	
+}
+
+.section-2 .item p{
+	font-size:17pt;
+	line-height:130%;
+}
+.section-2 .left-shift {
+	margin-left:80px;
+}
+.section-2 .emblem {
+	width:150px;
+	height:150px;
+	margin:auto;
+	border:1px black solid;
+	border-radius:50%;
+	overflow:hidden;
+}
+.section-2 .item .emblem img {
+
+}
+
+.section-2 .emblem .im2 {
+margin-left: 32px;
+    margin-top: 32px;
+}
+
+.section-2 .emblem .im1,
+.section-2 .emblem .im3,
+.section-2 .emblem .im4 {
+	margin-left:30px;
+	margin-top:40px;
+}
+
+
+.section-2 .t-hr {
+	float:left;
+	width:1px;
+	background:black;
+	height:410px;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	height: 120px;
+	margin-top:30px;
+}
+
+.footer .content{
+	background: #DDCDB2;
+
+}
+
+.left {
+	float:left;
+	width:350px;
+	margin: 30px 0px 0px 100px;
+}
+
+.left p {
+	font-size:17pt;
+	line-height: 120%;
+	color:black;
+}
+
+.right {
+	float:right;
+	width:400px;
+	margin: 30px 30px 0px 0px;
+}
+
+
+.right p {
+	font-size:18pt;
+	line-height: 120%;
+}
+
+.right a {
+	text-decoration:none;
+	color:black;
+}
+.right a:hover {
+	border-bottom:1px dashed black;
+}
+.line {
+	float:left;
+	width:90px;
+	height:2px;
+	background:black;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:60px;
+}
+
+.logo-f {
+	margin-top:10px;
+	float:left;
+}
